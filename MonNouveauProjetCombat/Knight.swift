@@ -1,0 +1,15 @@
+//
+//  Knight.swift
+//  MonNouveauProjetCombat
+//
+//  Created by macmini-Armelle on 10/02/2020.
+//  Copyright © 2020 armellelecerf. All rights reserved.
+//
+
+import Foundation
+class Knight : Warrior{
+    init( name : String){
+        super.init(life : 110, name : name, weapon : Sword())
+    }
+    
+}
