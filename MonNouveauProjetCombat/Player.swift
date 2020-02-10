@@ -15,10 +15,10 @@ class Player {
         warriors = []
     }
     func hasTeamAlive() -> Bool {
-        
+     return true
     }
     
     func selecFighter()-> Warrior{
-        
+     return 
     }
 }
