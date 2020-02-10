@@ -13,6 +13,10 @@
 		D5D0F6B723F1EC74009BE449 /* Viking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D0F6B623F1EC73009BE449 /* Viking.swift */; };
 		D5D0F6B923F1ED40009BE449 /* Gladiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D0F6B823F1ED40009BE449 /* Gladiator.swift */; };
 		D5D0F6BB23F1EDAB009BE449 /* Knight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D0F6BA23F1EDAB009BE449 /* Knight.swift */; };
+		D5D0F6BD23F1EE1A009BE449 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D0F6BC23F1EE1A009BE449 /* Weapon.swift */; };
+		D5D0F6BF23F1EE4D009BE449 /* Ax.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D0F6BE23F1EE4D009BE449 /* Ax.swift */; };
+		D5D0F6C123F1EE7D009BE449 /* BroadSword.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D0F6C023F1EE7D009BE449 /* BroadSword.swift */; };
+		D5D0F6C323F1EE9D009BE449 /* Sword.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D0F6C223F1EE9D009BE449 /* Sword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +39,10 @@
 		D5D0F6B623F1EC73009BE449 /* Viking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viking.swift; sourceTree = "<group>"; };
 		D5D0F6B823F1ED40009BE449 /* Gladiator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gladiator.swift; sourceTree = "<group>"; };
 		D5D0F6BA23F1EDAB009BE449 /* Knight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Knight.swift; sourceTree = "<group>"; };
+		D5D0F6BC23F1EE1A009BE449 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
+		D5D0F6BE23F1EE4D009BE449 /* Ax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ax.swift; sourceTree = "<group>"; };
+		D5D0F6C023F1EE7D009BE449 /* BroadSword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadSword.swift; sourceTree = "<group>"; };
+		D5D0F6C223F1EE9D009BE449 /* Sword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sword.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,10 @@
 				D5D0F6B623F1EC73009BE449 /* Viking.swift */,
 				D5D0F6B823F1ED40009BE449 /* Gladiator.swift */,
 				D5D0F6BA23F1EDAB009BE449 /* Knight.swift */,
+				D5D0F6BC23F1EE1A009BE449 /* Weapon.swift */,
+				D5D0F6BE23F1EE4D009BE449 /* Ax.swift */,
+				D5D0F6C023F1EE7D009BE449 /* BroadSword.swift */,
+				D5D0F6C223F1EE9D009BE449 /* Sword.swift */,
 			);
 			path = MonNouveauProjetCombat;
 			sourceTree = "<group>";
@@ -138,9 +150,13 @@
 				D5D0F6B523F1EA60009BE449 /* Warrior.swift in Sources */,
 				D5D0F6B323F1E8F7009BE449 /* Player.swift in Sources */,
 				D5D0F6B923F1ED40009BE449 /* Gladiator.swift in Sources */,
+				D5D0F6BD23F1EE1A009BE449 /* Weapon.swift in Sources */,
+				D5D0F6BF23F1EE4D009BE449 /* Ax.swift in Sources */,
+				D5D0F6C323F1EE9D009BE449 /* Sword.swift in Sources */,
 				D5D0F6AC23F1E8D5009BE449 /* main.swift in Sources */,
 				D5D0F6BB23F1EDAB009BE449 /* Knight.swift in Sources */,
 				D5D0F6B723F1EC74009BE449 /* Viking.swift in Sources */,
+				D5D0F6C123F1EE7D009BE449 /* BroadSword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
