@@ -23,6 +23,31 @@ class Warrior {
         
     }
     
+     func receiveDamage(damage : Int){
+                self.life = self.life - damage
+          //If life turns into negative value, life will be equal to zero
+        if self.life < 0
+                {
+                    self.life = 0
+                }
+            }
+            
+            
+            
+        func fightAgainst(fighter : Warrior)
+            {
+                fighter.receiveDamage(damage: self.weapon.damage)
+            }
+    func increasePowerArm ()
+            {self.weapon.damage += 8}
+        
+            
+      
+       
+        func cureOneself(){
+            self.life +=  10 }
+        
+    
     func printCaracteristic(){
         if life > 0 {
             print("\(name) is alive, Life : \(life)")
