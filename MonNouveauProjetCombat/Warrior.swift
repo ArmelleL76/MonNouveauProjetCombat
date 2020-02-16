@@ -48,7 +48,7 @@ class Warrior {
             self.life +=  10 }
         
     
-    func printCaracteristic(){
+    func printCharacteristic(){
         if life > 0 {
             print("\(name) is alive, Life : \(life)")
         }
