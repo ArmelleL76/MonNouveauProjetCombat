@@ -10,4 +10,4 @@ import Foundation
 
 
 let game = Game()
-//game.start()
+print(game.presentation())

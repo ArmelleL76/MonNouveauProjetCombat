@@ -30,7 +30,7 @@ class Player {
         return false
     }
     
-    func selectWarrior(team: [Warrior]) -> Warrior {
+    func selectWarrior() -> Warrior {
         // TODO
         var i = 1
         for warrior in team {
@@ -46,7 +46,7 @@ class Player {
             return selectedWarrior
         } else {
             print("You choosed a dead warrior, Please select another one.")
-            return selectWarrior(team: <#T##[Warrior]#>)
+            return selectWarrior()
         }
     }
 }
