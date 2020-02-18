@@ -98,13 +98,13 @@ class Game {
         gladiator2.name = nameFighter2[1]
         knight2.name = nameFighter2[2]
       print("TEAM1 :    \(namePlayer1)")
-     print("Viking1 :  \(viking1.name)    Life : \(viking1.life)    weapon : \(viking1.weapon)\n")
-         print("Gladiator1 :  \(gladiator1.name)    Life : \(gladiator1.life)    weapon : \(gladiator1.weapon)\n")
-         print("Knight1 :  \(knight1.name)    Life : \(knight1.life)    weapon : \(knight1.weapon)\n")
+        print("Viking1 :  \(viking1.name)    Life : \(viking1.life)    weapon : \(viking1.weapon.name)\n")
+        print("Gladiator1 :  \(gladiator1.name)    Life : \(gladiator1.life)    weapon : \(gladiator1.weapon.name)\n")
+        print("Knight1 :  \(knight1.name)    Life : \(knight1.life)    weapon : \(knight1.weapon.name)\n")
     print("TEAM2 :    \(namePlayer2)")
-   print("Viking2 :  \(viking2.name)    Life : \(viking2.life)    weapon : \(viking2.weapon)\n")
-   print("Gladiator2 :  \(gladiator2.name)    Life : \(gladiator2.life)    weapon : \(gladiator2.weapon)\n")
-   print("Knight2 :  \(knight2.name)    Life : \(knight2.life)    weapon : \(knight2.weapon)\n")
+        print("Viking2 :  \(viking2.name)    Life : \(viking2.life)    weapon : \(viking2.weapon.name)\n")
+        print("Gladiator2 :  \(gladiator2.name)    Life : \(gladiator2.life)    weapon : \(gladiator2.weapon.name)\n")
+        print("Knight2 :  \(knight2.name)    Life : \(knight2.life)    weapon : \(knight2.weapon.name)\n")
     }
     
     func displayWarriorTeams(){

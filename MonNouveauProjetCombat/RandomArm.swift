@@ -9,6 +9,6 @@
 import Foundation
 class RandomArm : Weapon {
     init() {
-        super.init(damage: 10)
+        super.init(damage: 10, name : "randomArm")
     }
 }
