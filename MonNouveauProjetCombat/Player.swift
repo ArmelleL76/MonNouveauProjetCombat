@@ -22,7 +22,7 @@ class Player {
     // Players give their names
        func collectNamePlayer1()->String{
           var namePlayer1 = ""
-          print("\nFist Player give your Name and do return\n\n")
+          print("\nFirst Player give your Name and do return\n\n")
            
         if  let name1 = readLine(){print("\nWelcome and good game: \(name1)\n")
             namePlayer1 = name1
