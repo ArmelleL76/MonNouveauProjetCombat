@@ -19,7 +19,43 @@ class Player {
         
     }
    
+    // Players give their names
+       func collectNamePlayer1()->String{
+          var namePlayer1 = ""
+          print("\nFist Player give your Name and do return\n\n")
+           
+        if  let name1 = readLine(){print("\nWelcome and good game: \(name1)\n")
+            namePlayer1 = name1
+        }
+        
+        return namePlayer1
+    }
     
+       func collectNamePlayer2()->String{
+       var namePlayer2 = ""
+        print("\nSecond Player give your Name and do return\n\n")
+         
+         if  let name2 = readLine(){print("\nWelcome and good game: \(name2)\n")
+            namePlayer2 = name2
+           }
+        return namePlayer2
+    }
+       
+       func displayTeam1()-> String{
+        
+           let name1 : String = collectNamePlayer1()
+           var monText = ""
+           monText = "   ---  TEAM 1 : ---" + "  PLAYER1 : \(name1)   ---\n\n"
+         return monText
+    }
+        
+    func displayTeam2()-> String{
+         
+            let name2 : String = collectNamePlayer1()
+            var monText = ""
+        monText += "   ---  TEAM 1 : ---" + "  PLAYER1 : \(name2)   ---\n\n"
+       return monText
+       }
     
     
     func hasTeamAlive() -> Bool {

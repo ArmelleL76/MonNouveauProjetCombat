@@ -87,18 +87,65 @@ class Game {
     
         
     func display(){
-        
+        let namePlayer1  = player1.collectNamePlayer1()
+        let namePlayer2 = player2.collectNamePlayer2()
+        nameFighter1 = collectNameFighterTeam1()
+        nameFighter2 = collectNameFighterTeam2()
+        viking1.name = nameFighter1[0]
+        gladiator1.name = nameFighter1[1]
+        knight1.name = nameFighter1[2]
+        viking2.name = nameFighter2[0]
+        gladiator2.name = nameFighter2[1]
+        knight2.name = nameFighter2[2]
+      print("TEAM1 :    \(namePlayer1)")
+     print("Viking1 :  \(viking1.name)    Life : \(viking1.life)    weapon : \(viking1.weapon)\n")
+         print("Gladiator1 :  \(gladiator1.name)    Life : \(gladiator1.life)    weapon : \(gladiator1.weapon)\n")
+         print("Knight1 :  \(knight1.name)    Life : \(knight1.life)    weapon : \(knight1.weapon)\n")
+    print("TEAM2 :    \(namePlayer2)")
+   print("Viking2 :  \(viking2.name)    Life : \(viking2.life)    weapon : \(viking2.weapon)\n")
+   print("Gladiator2 :  \(gladiator2.name)    Life : \(gladiator2.life)    weapon : \(gladiator2.weapon)\n")
+   print("Knight2 :  \(knight2.name)    Life : \(knight2.life)    weapon : \(knight2.weapon)\n")
     }
+    
+    func displayWarriorTeams(){
+       let player = Player()
+    print(player.displayTeam1())
+    print(player.displayTeam2())
+
+
+
+     
+
+        print(" Team1 :  ")
+       
+ //       for index in 0...2
+ //       {
+ //        print("Name : \(fighterTeam1[index])   " +
+// fighter.description(range: index, team: 1))}
+
+    print(" Team2 :  ")
+
+//     for index in 0...2
+ //    {
+//      print("Name : \(fighterTeam2[index])   " + fighter.description(range: //index, team: 2))}
+
+          }
     func battle(){
    // round = 0
     //tant que les deux  equipes ont un joueur vivant : repeat
     //round +=1
    //on calcule quel joueur joue
-        
+    //player= playerWhoPlay()
    //on affiche l'état des équipes
 // le joueur sélectionné choisit un guerrier dans son équipe
+  //faire un switch si le joueur sélectionné est le 1
+        //il choisit dans l'équipe 1 puis l'équipe2 sinon c'est l'inverse
+//player.selectWarrior1()
+ 
   //le joueur sélectionné choisit un guerrier dans l'autre équipe
+        //player.selectWarrior2() ou l'inverse
   //On affiche les deux guerriers qui vont s'affronter
+        
    //on lance l'apparition du coffre
    //Si coffre et randomStrenght> à l'arme du guerrier on échange
    //le joueur choisit une action à effectuer
