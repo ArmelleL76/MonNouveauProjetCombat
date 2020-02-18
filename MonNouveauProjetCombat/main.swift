@@ -12,3 +12,9 @@ import Foundation
 let game = Game()
 print(game.presentation())
 game.display()
+
+
+var bo : Bool
+bo = game.player1.hasTeamAlive()
+if bo { print("true")}
+else {print("false")}

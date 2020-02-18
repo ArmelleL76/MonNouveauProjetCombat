@@ -131,12 +131,15 @@ class Game {
 
           }
     func battle(){
-   // round = 0
+   //initialiser les équipes, les remplir
+        // round = 0
     //tant que les deux  equipes ont un joueur vivant : repeat
+    //player1.hasTeamAlive() && player2.hasTeamAlive ???
     //round +=1
    //on calcule quel joueur joue
     //player= playerWhoPlay()
    //on affiche l'état des équipes
+      
 // le joueur sélectionné choisit un guerrier dans son équipe
   //faire un switch si le joueur sélectionné est le 1
         //il choisit dans l'équipe 1 puis l'équipe2 sinon c'est l'inverse
@@ -151,6 +154,8 @@ class Game {
    //le joueur choisit une action à effectuer
    //l'action est effectuée
         //on affiche les résultats intermédiaires
+        //si un guerrier a une vie negative on la met à zero
+        //si  un guerrier est mort on le remove de l'équipe
     // on boucle while isAlive is true
         
         
