@@ -9,12 +9,13 @@
 import Foundation
 class Player {
     var name : String
-    var team: [Warrior]
+    var team1: [Warrior]
+    var team2: [Warrior]
    
     
     init() {
-        team = []
-       
+      team1 = []
+      team2 = []
         name = ""
         
     }
@@ -60,16 +61,16 @@ class Player {
     
     func hasTeamAlive() -> Bool {
    
-        if team.count > 0  {
+        if team1.count > 0  && team2.count > 0 {
          return true
         }
         return false
     }
     
-    func selectWarrior() -> Warrior {
+    func selectWarrior1() -> Warrior {
         // TODO
         var i = 1
-        for warrior in team {
+        for warrior in team1 {
             print("Personnage \(i)")
             warrior.printCharacteristic()
             i += 1
@@ -77,12 +78,12 @@ class Player {
         
         let choice = readLine()
         let choiceNumber = Int(choice!)!
-        let selectedWarrior = team[choiceNumber - 1]
+        let selectedWarrior = team1[choiceNumber - 1]
         if selectedWarrior.life > 0 {
             return selectedWarrior
         } else {
             print("You choosed a dead warrior, Please select another one.")
-            return selectWarrior()
+            return selectWarrior1()
         }
     }
 }

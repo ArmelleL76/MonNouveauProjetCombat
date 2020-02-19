@@ -32,16 +32,16 @@ class Game {
     
     // 1. Creer les equipes
     func createTeam1()-> [Warrior]{
-        player1.team[0] = viking1
-        player1.team[1] = gladiator1
-        player1.team[2] = knight1
-        return player1.team
+        player1.team1.append(viking1)
+        player1.team1.append(gladiator1)
+        player1.team1.append(knight1)
+        return player1.team1
     }
     func createTeam2()-> [Warrior]{
-        player2.team[0] = viking2
-        player2.team[1] = gladiator2
-        player2.team[2] = knight2
-        return player2.team
+         player2.team2.append(viking2)
+               player2.team2.append(gladiator2)
+               player2.team2.append(knight2)
+        return player2.team2
     }
     func collectNameFighterTeam1()->[String]
     {
@@ -107,32 +107,22 @@ class Game {
         print("Knight2 :  \(knight2.name)    Life : \(knight2.life)    weapon : \(knight2.weapon.name)\n")
     }
     
-    func displayWarriorTeams(){
-       let player = Player()
-    print(player.displayTeam1())
-    print(player.displayTeam2())
-
+   
 
 
      
 
-        print(" Team1 :  ")
-       
- //       for index in 0...2
- //       {
- //        print("Name : \(fighterTeam1[index])   " +
-// fighter.description(range: index, team: 1))}
-
-    print(" Team2 :  ")
-
-//     for index in 0...2
- //    {
-//      print("Name : \(fighterTeam2[index])   " + fighter.description(range: //index, team: 2))}
-
-          }
+    
     func battle(){
-   //initialiser les équipes, les remplir
-        // round = 0
+   //initialiser les équipes, les remplir, il me faut les vies 
+        let team1 = createTeam1()
+        let team2 = createTeam2()
+        print(team1.count)
+        print(team2.count)
+       // round = 0
+        //while team1.count >0 && team2.count > 0
+      //je ferai si viking1.life ==0 team1.remove(at :0)
+       
     //tant que les deux  equipes ont un joueur vivant : repeat
     //player1.hasTeamAlive() && player2.hasTeamAlive ???
     //round +=1
