@@ -71,19 +71,44 @@ class Player {
         // TODO
         var i = 1
         for warrior in team1 {
-            print("Personnage \(i)")
+            print("Fighter \(i)")
             warrior.printCharacteristic()
             i += 1
         }
         
-        let choice = readLine()
-        let choiceNumber = Int(choice!)!
+        if  let choice = readLine(){
+        let choiceNumber = Int(choice)!
         let selectedWarrior = team1[choiceNumber - 1]
         if selectedWarrior.life > 0 {
             return selectedWarrior
         } else {
             print("You choosed a dead warrior, Please select another one.")
-            return selectWarrior1()
+            }
         }
+            return selectWarrior1()
+        
     }
+    func selectWarrior2() -> Warrior {
+           // TODO
+           var i = 1
+           for warrior in team2 {
+               print("Fighter \(i)")
+               warrior.printCharacteristic()
+               i += 1
+           }
+           
+        if let choice = readLine(){
+           let choiceNumber = Int(choice)!
+           let selectedWarrior = team2[choiceNumber - 1]
+           if selectedWarrior.life > 0 {
+               return selectedWarrior
+           } else {
+            print("You choosed a dead warrior, Please select another one.")
+            
+            }
+            
+        }
+            return selectWarrior2()
+        }
 }
+

@@ -13,5 +13,4 @@ let game = Game()
 print(game.presentation())
 game.display()
 
-
 game.battle()

@@ -89,6 +89,8 @@ class Game {
     func display(){
         let namePlayer1  = player1.collectNamePlayer1()
         let namePlayer2 = player2.collectNamePlayer2()
+        player1.name = namePlayer1
+         player2.name = namePlayer2
         nameFighter1 = collectNameFighterTeam1()
         nameFighter2 = collectNameFighterTeam2()
         viking1.name = nameFighter1[0]
@@ -119,8 +121,19 @@ class Game {
         let team2 = createTeam2()
         print(team1.count)
         print(team2.count)
-       // round = 0
-        //while team1.count >0 && team2.count > 0
+      
+   // repeat{
+        let numberPlayer = playerWhoPlay(round: 5)
+        
+        switch numberPlayer {
+        case 1 : print(player1.name)
+        player1.selectWarrior1()
+        case 2 : print(player2.name)
+        player2.selectWarrior2()
+        default : break
+        }
+    
+   // }while team1.count > 0 && team2.count > 0
       //je ferai si viking1.life ==0 team1.remove(at :0)
        
     //tant que les deux  equipes ont un joueur vivant : repeat
@@ -151,11 +164,11 @@ class Game {
         
     }
   
-  func playerWhoPlay(round: Int) -> Player {
+  func playerWhoPlay(round: Int) -> Int {
       if round % 2 == 0 {
-          return player1
+          return 1
       } else {
-          return player2
+          return 2
       }
   }
   
