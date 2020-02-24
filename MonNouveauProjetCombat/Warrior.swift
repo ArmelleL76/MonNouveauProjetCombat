@@ -12,11 +12,13 @@ class Warrior {
     var name : String
     var weapon : Weapon
     
+    
     init(life : Int, name : String, weapon : Weapon){
     self.life = life
     self.name = name
     self.weapon = weapon
 }
+   
     
     func actionOn (fighter : Warrior) {
         fighter.life -= self.weapon.damage

@@ -11,6 +11,6 @@ import Foundation
 
 let game = Game()
 print(game.presentation())
-game.display()
+game.player1.display()
 
 game.battle()

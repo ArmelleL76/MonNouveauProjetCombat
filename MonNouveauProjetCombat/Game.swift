@@ -10,68 +10,18 @@ import Foundation
 class Game {
     var player1: Player
     var player2: Player
-    let viking1 : Warrior
-    let gladiator1 : Warrior
-    let knight1 : Warrior
-    let viking2 : Warrior
-    let gladiator2 : Warrior
-    let knight2 : Warrior
+    
     var nameFighter1 = [String]()
     var nameFighter2 = [String]()
     init() {
-        viking1 =  Warrior(life: 100, name: "", weapon: Ax())
-        gladiator1 = Warrior(life: 80, name: "", weapon: BroadSword())
-        knight1 = Warrior(life: 110, name: "", weapon: Sword())
-        viking2 = Warrior(life: 100, name: "", weapon: Ax())
-        gladiator2 = Warrior(life: 80, name: "", weapon: BroadSword())
-        knight2 = Warrior(life: 110, name: "", weapon: Sword())
+        
         player1 = Player()
         player2 = Player()
     }
     
     
-    // 1. Creer les equipes
-    func createTeam1()-> [Warrior]{
-        player1.team1.append(viking1)
-        player1.team1.append(gladiator1)
-        player1.team1.append(knight1)
-        return player1.team1
-    }
-    func createTeam2()-> [Warrior]{
-         player2.team2.append(viking2)
-               player2.team2.append(gladiator2)
-               player2.team2.append(knight2)
-        return player2.team2
-    }
-    func collectNameFighterTeam1()->[String]
-    {
-         print("\nFirst Player give a name to your fighters in this order : viking, gladiator, knight,  and do return after each name\n")
-         for _ in 0...2{
-         
-         if let name = readLine(){ print("\nWelcome and good luck for fighting : \(name)\n")
-          nameFighter1.append(name)}
-         }
-        viking1.name = nameFighter1[0]
-        gladiator1.name = nameFighter1[1]
-        knight1.name = nameFighter1[2]
-         return nameFighter1
-     
-         }
-      
-      func collectNameFighterTeam2()->[String]
-      {
-            print("\nSecond Player give a name to your fighters in this order : viking, gladiator, knight,  and do return after each name\n")
-            for _ in 0...2{
-            
-            if let name = readLine(){ print("\nWelcome and good luck for fighting : \(name)\n")
-              nameFighter2.append(name)}
-            }
-            viking2.name = nameFighter2[0]
-            gladiator2.name = nameFighter2[1]
-            knight2.name = nameFighter2[2]
-            return nameFighter2
-        
-            }
+  
+   
     func presentation()-> String{
         //Présentation du jeu
         var myText : String = ""
@@ -87,51 +37,44 @@ class Game {
     
         
     func display(){
-        let namePlayer1  = player1.collectNamePlayer1()
-        let namePlayer2 = player2.collectNamePlayer2()
-        player1.name = namePlayer1
-         player2.name = namePlayer2
-        nameFighter1 = collectNameFighterTeam1()
-        nameFighter2 = collectNameFighterTeam2()
-        viking1.name = nameFighter1[0]
-        gladiator1.name = nameFighter1[1]
-        knight1.name = nameFighter1[2]
-        viking2.name = nameFighter2[0]
-        gladiator2.name = nameFighter2[1]
-        knight2.name = nameFighter2[2]
-      print("TEAM1 :    \(namePlayer1)")
-        print("Viking1 :  \(viking1.name)    Life : \(viking1.life)    weapon : \(viking1.weapon.name)\n")
-        print("Gladiator1 :  \(gladiator1.name)    Life : \(gladiator1.life)    weapon : \(gladiator1.weapon.name)\n")
-        print("Knight1 :  \(knight1.name)    Life : \(knight1.life)    weapon : \(knight1.weapon.name)\n")
-    print("TEAM2 :    \(namePlayer2)")
-        print("Viking2 :  \(viking2.name)    Life : \(viking2.life)    weapon : \(viking2.weapon.name)\n")
-        print("Gladiator2 :  \(gladiator2.name)    Life : \(gladiator2.life)    weapon : \(gladiator2.weapon.name)\n")
-        print("Knight2 :  \(knight2.name)    Life : \(knight2.life)    weapon : \(knight2.weapon.name)\n")
+        
     }
-    
-   
-
-
-     
-
     
     func battle(){
    //initialiser les équipes, les remplir, il me faut les vies 
-        let team1 = createTeam1()
-        let team2 = createTeam2()
-        print(team1.count)
-        print(team2.count)
-      
+        let team1 = player1.createTeam1()
+        let team2 = player2.createTeam2()
+        print("Number of fighters alive in TEAM1 : \(team1.count)")
+        print("Number of fighters alive in TEAM2 : \(team2.count)")
+        for fighter in team1 {print("\(fighter.name)  " + "  \(fighter.life)")}
+        for fighter in team2 {print("\(fighter.name)  " + "  \(fighter.life)")}
    // repeat{
-        let numberPlayer = playerWhoPlay(round: 5)
-        
+        let numberPlayer = playerWhoPlay(round: 2)
+        var fighter1 : Warrior
+        var otherFighter1 : Warrior
+        var fighter2 : Warrior
+         var otherFighter2 : Warrior
         switch numberPlayer {
-        case 1 : print(player1.name)
-        player1.selectWarrior1()
-        case 2 : print(player2.name)
-        player2.selectWarrior2()
+        case 1 :
+            print("Here is the player who play : \(self.player1.name[0])")
+            fighter1 = self.player1.selectWarrior1()
+         print("The first fighter will be \(fighter1.name)")
+             print("Choose a second fighter in the other team")
+            print("la deuxième équipa a \(team2.count)joueurs vivants")
+            
+            otherFighter1 = self.player1.selectWarrior2()
+            print("\(fighter1.name) will be opposed to \(otherFighter1.name)" )
+            
+        case 2 : print("Here is the player who play : \(self.player2.name[1])")
+        fighter2 = self.player2.selectWarrior2()
+            print("The first fighter will be \(fighter2.name)")
+            print("Choose a second fighter in the other team")
+         print("la deuxième équipa a \(team1.count)joueurs vivants")
+        otherFighter2 = self.player2.selectWarrior1()
+            print("\(fighter2.name) will be opposed to \(otherFighter2.name)" )
         default : break
         }
+       
     
    // }while team1.count > 0 && team2.count > 0
       //je ferai si viking1.life ==0 team1.remove(at :0)
