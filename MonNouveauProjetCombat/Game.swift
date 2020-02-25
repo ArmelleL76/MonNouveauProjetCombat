@@ -46,6 +46,7 @@ class Game {
     
       nameFighter1 = player1.collectNameFighterTeam1()
       nameFighter2 = player2.collectNameFighterTeam2()
+        
   var round = 0
       
         
@@ -58,10 +59,36 @@ class Game {
                    
         // Demander au joueur de choisir un personnage adverse
                    let otherFighter = player2.selectWarrior2()
-                   
+            
+        //Faire apparaître le coffre
+            let chest = Chest(randomStrenght: 10)
+          print(chest.appear())
+
         // Effectuer l'action du personnage contre le personnage adverse
-                fighter.actionOn(fighter: otherFighter)
-                   
+                
+                    var playerChoice : String = ""
+            repeat{
+                           print("What is your choice?")
+                           print("1. fight against and cause damages : choose 1 and do return")
+                           print("2. Increase arm's strenght : choose 2 and do return")
+                           print("3. Cure your fighter : choose 3 and do return")
+                           
+                           if let choice = readLine(){
+                print("You choosed \(choice)")
+                         playerChoice = choice
+                                    switch playerChoice
+                                      {
+                                      case "1" : fighter.actionOn(fighter: otherFighter)
+                                      case "2" : fighter.increasePowerArm()
+                                      case "3" : fighter.cureOneself()
+                                      default : print("Choose a number in (1,2,3)")
+                                     
+                            }
+                    }
+                } while playerChoice != "1" && playerChoice != "2" && playerChoice != "3"
+
+
+            
                    
                    
                    round += 1
