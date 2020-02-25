@@ -2,7 +2,7 @@
 //  Player.swift
 //  MonNouveauProjetCombat
 //
-//  Created by macmini-Armelle on 10/02/2020.
+//  Created by macmini-Armelle on 24/02/2020.
 //  Copyright © 2020 armellelecerf. All rights reserved.
 //
 
@@ -11,23 +11,27 @@ class Player {
     var name = [String]()
     var teamPlayer1: [Warrior]
     var teamPlayer2: [Warrior]
-   let viking1 : Warrior
-      let gladiator1 : Warrior
-      let knight1 : Warrior
-      let viking2 : Warrior
-      let gladiator2 : Warrior
-      let knight2 : Warrior
+   var viking1 : Warrior
+     var gladiator1 : Warrior
+     var knight1 : Warrior
+     var viking2 : Warrior
+      var gladiator2 : Warrior
+      var knight2 : Warrior
+    var warriorsNamesTeam1 = [String]()
+    var warriorNamesTeam2 = [String]()
     var nameFighter1 = [String]()
     var nameFighter2 = [String]()
     init() {
-      teamPlayer1 = []
-      teamPlayer2 = []
-       viking1 =  Warrior(life: 100, name: "", weapon: Ax())
-        gladiator1 = Warrior(life: 80, name: "", weapon: BroadSword())
-        knight1 = Warrior(life: 110, name: "", weapon: Sword())
-        viking2 = Warrior(life: 100, name: "", weapon: Ax())
-        gladiator2 = Warrior(life: 80, name: "", weapon: BroadSword())
-        knight2 = Warrior(life: 110, name: "", weapon: Sword())
+    viking1 =  Warrior(life: 100, name: "", weapon: Ax())
+    gladiator1 = Warrior(life: 80, name: "", weapon: BroadSword())
+    knight1 = Warrior(life: 110, name: "", weapon: Sword())
+    viking2 = Warrior(life: 100, name: "", weapon: Ax())
+    gladiator2 = Warrior(life: 80, name: "", weapon: BroadSword())
+    knight2 = Warrior(life: 110, name: "", weapon: Sword())
+    teamPlayer1 = [viking1, gladiator1, knight1]
+    teamPlayer2 = [viking2, gladiator2, knight2]
+       
+   
     }
    
     // Players give their names
@@ -57,25 +61,21 @@ class Player {
            let namePlayer2 = collectNamePlayer2()
         name.append(namePlayer1)
         name.append(namePlayer2)
-           nameFighter1 = collectNameFighterTeam1()
-           nameFighter2 = collectNameFighterTeam2()
-           viking1.name = nameFighter1[0]
-           gladiator1.name = nameFighter1[1]
-           knight1.name = nameFighter1[2]
-           viking2.name = nameFighter2[0]
-           gladiator2.name = nameFighter2[1]
-           knight2.name = nameFighter2[2]
-         print("TEAM1 :    \(name[0])")
-           print("Viking1 :  \(viking1.name)    Life : \(viking1.life)    weapon : \(viking1.weapon.name)\n")
-           print("Gladiator1 :  \(gladiator1.name)    Life : \(gladiator1.life)    weapon : \(gladiator1.weapon.name)\n")
-           print("Knight1 :  \(knight1.name)    Life : \(knight1.life)    weapon : \(knight1.weapon.name)\n")
-       print("TEAM2 :    \(name[1])")
-           print("Viking2 :  \(viking2.name)    Life : \(viking2.life)    weapon : \(viking2.weapon.name)\n")
-           print("Gladiator2 :  \(gladiator2.name)    Life : \(gladiator2.life)    weapon : \(gladiator2.weapon.name)\n")
-           print("Knight2 :  \(knight2.name)    Life : \(knight2.life)    weapon : \(knight2.weapon.name)\n")
+       // nameFighter1 = collectNameFighterTeam1()
+       // nameFighter2 = collectNameFighterTeam2()
+       
+         print("Les équipes sont les suivantes : \n\n")
+         print("TEAM1 :    \(name[0])\n")
+           print("Viking1 ---  Life : \(viking1.life)    weapon : \(viking1.weapon.name)\n")
+           print("Gladiator1 ---  Life : \(gladiator1.life)    weapon : \(gladiator1.weapon.name)\n")
+           print("Knight1 ---  Life : \(knight1.life)    weapon : \(knight1.weapon.name)\n")
+       print("TEAM2 :    \(name[1])\n")
+           print("Viking2 ---  Life : \(viking2.life)    weapon : \(viking2.weapon.name)\n")
+           print("Gladiator2 ---  Life : \(gladiator2.life)    weapon : \(gladiator2.weapon.name)\n")
+           print("Knight2 ---  Life : \(knight2.life)    weapon : \(knight2.weapon.name)\n")
        }
        
-      
+    
 
 
         
@@ -91,7 +91,7 @@ class Player {
                  viking1.name = nameFighter1[0]
                  gladiator1.name = nameFighter1[1]
                  knight1.name = nameFighter1[2]
-                  return nameFighter1
+                return [viking1.name, gladiator1.name, knight1.name]
               
                   }
                
@@ -106,21 +106,24 @@ class Player {
                      viking2.name = nameFighter2[0]
                      gladiator2.name = nameFighter2[1]
                      knight2.name = nameFighter2[2]
-                     return nameFighter2
+                      return [viking2.name, gladiator2.name, knight2.name]
                  
                      }
        // 1. Creer les equipes
-         func createTeam1()-> [Warrior]{
-            self.teamPlayer1.append(viking1)
-            self.teamPlayer1.append(gladiator1)
-            self.teamPlayer1.append(knight1)
-             return teamPlayer1
+        
+    func createTeam1()-> [Warrior]{
+        viking1 =  Warrior(life: 100, name: "nemefighter1[0]", weapon: Ax())
+        gladiator1 = Warrior(life: 80, name: "nameFighter1[1]", weapon: BroadSword())
+        knight1 = Warrior(life: 110, name: "nameFighter1[2]", weapon: Sword())
+        
+        return [viking1, gladiator1, knight1]
          }
-         func createTeam2()-> [Warrior]{
-            self.teamPlayer2.append(viking2)
-            self.teamPlayer2.append(gladiator2)
-            self.teamPlayer2.append(knight2)
-             return teamPlayer2
+        
+    func createTeam2()-> [Warrior]{
+            viking2 = Warrior(life: 100, name: "nameFighter2[0]", weapon: Ax())
+            gladiator2 = Warrior(life: 80, name: "nameFighter2[1]", weapon: BroadSword())
+            knight2 = Warrior(life: 110, name: "nameFighter2[2]", weapon: Sword())
+             return [viking2, gladiator2, knight2]
          }
     
       
@@ -157,10 +160,14 @@ class Player {
             warrior.printCharacteristic()
             i += 1
         }
+        print("Enter your choice: ")
+        print("1 for viking")
+        print("2 for gladiator")
+        print("3 for knight")
         
         if  let choice = readLine(){
         let choiceNumber1 = Int(choice)!
-            print("Le choix entré au clavier vaut : \(choiceNumber1)")
+            print("Your choice is : \(choiceNumber1)")
             print(choiceNumber1-1)
         let selectedWarrior = teamPlayer1[choiceNumber1 - 1]
         if selectedWarrior.life > 0 {
@@ -179,11 +186,16 @@ class Player {
               print("Fighter \(i)")
                warrior.printCharacteristic()
                i += 1
+            
            }
+        print("Enter your choice: ")
+        print("1 for viking")
+        print("2 for gladiator")
+        print("3 for knight")
            
         if let choice = readLine(){
            let choiceNumber = Int(choice)!
-            print("Le choix entré au clavier vaut : \(choiceNumber)")
+            print("your choice is  : \(choiceNumber)")
             print(teamPlayer2.count)
            let selectedWarrior = teamPlayer2[choiceNumber - 1]
            if selectedWarrior.life > 0 {
@@ -197,4 +209,3 @@ class Player {
             return selectWarrior2()
         }
 }
-

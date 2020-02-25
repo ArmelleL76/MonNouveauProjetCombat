@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D54ABA6424044FE000D44D48 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54ABA6324044FE000D44D48 /* Player.swift */; };
 		D5D0F6AC23F1E8D5009BE449 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D0F6AB23F1E8D5009BE449 /* main.swift */; };
-		D5D0F6B323F1E8F7009BE449 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D0F6B223F1E8F7009BE449 /* Player.swift */; };
 		D5D0F6B523F1EA60009BE449 /* Warrior.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D0F6B423F1EA60009BE449 /* Warrior.swift */; };
 		D5D0F6B723F1EC74009BE449 /* Viking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D0F6B623F1EC73009BE449 /* Viking.swift */; };
 		D5D0F6B923F1ED40009BE449 /* Gladiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D0F6B823F1ED40009BE449 /* Gladiator.swift */; };
@@ -35,9 +35,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D54ABA6324044FE000D44D48 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		D5D0F6A823F1E8D5009BE449 /* MonNouveauProjetCombat */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MonNouveauProjetCombat; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D0F6AB23F1E8D5009BE449 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		D5D0F6B223F1E8F7009BE449 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		D5D0F6B423F1EA60009BE449 /* Warrior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warrior.swift; sourceTree = "<group>"; };
 		D5D0F6B623F1EC73009BE449 /* Viking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viking.swift; sourceTree = "<group>"; };
 		D5D0F6B823F1ED40009BE449 /* Gladiator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gladiator.swift; sourceTree = "<group>"; };
@@ -82,9 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				D5D0F6AB23F1E8D5009BE449 /* main.swift */,
-				D5D0F6B223F1E8F7009BE449 /* Player.swift */,
 				D5D0F6C423F1F0B4009BE449 /* Game.swift */,
 				D5D0F6C623F1F0D1009BE449 /* Chest.swift */,
+				D54ABA6324044FE000D44D48 /* Player.swift */,
 				D5D0F6B423F1EA60009BE449 /* Warrior.swift */,
 				D5D0F6B623F1EC73009BE449 /* Viking.swift */,
 				D5D0F6B823F1ED40009BE449 /* Gladiator.swift */,
@@ -157,11 +157,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5D0F6B523F1EA60009BE449 /* Warrior.swift in Sources */,
-				D5D0F6B323F1E8F7009BE449 /* Player.swift in Sources */,
 				D5D0F6B923F1ED40009BE449 /* Gladiator.swift in Sources */,
 				D5D0F6BD23F1EE1A009BE449 /* Weapon.swift in Sources */,
 				D5D0F6BF23F1EE4D009BE449 /* Ax.swift in Sources */,
 				D5D0F6C323F1EE9D009BE449 /* Sword.swift in Sources */,
+				D54ABA6424044FE000D44D48 /* Player.swift in Sources */,
 				D5D0F6C523F1F0B4009BE449 /* Game.swift in Sources */,
 				D5D0F6AC23F1E8D5009BE449 /* main.swift in Sources */,
 				D5D0F6C923F1F0F4009BE449 /* RandomArm.swift in Sources */,
