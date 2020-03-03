@@ -12,7 +12,7 @@ import Foundation
 let game = Game()
 
 
-game.presentation()   // la présentation fonctionne
+
 
 //On donne des noms..Présentation des équipes avec leurs caractéristiques
 game.display()  // la présentation des équipes fonctionne

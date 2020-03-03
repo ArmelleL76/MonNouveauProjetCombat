@@ -22,19 +22,14 @@ class Game {
              print("3. Here is the list of possible fighters : \n\n******************\n\nTeam1: \n\nViking1, Gladiator1 and Knight1\n\n******************\n\nTeam2:\n\nViking2, Gladiator2 and Knight2\n\n******************\n\n")
               
             print("Here is a suggestion of optionnal names for your warriors :   \nVikings'names : Sigrid, Thor, Bjorn, Odin, Ragnar, Magnum... \nGladiators'names : Lucius, Marcus, Titus, Sextus, Quintus, Servius...\nKnights'names : Gauvain, Arthur, Perceval, Lancelot, Tristan...\n\n")
+        
         player1 = Player()
         player2 = Player()
     }
     
     
   
-     //Présentation du jeu
-    func presentation(){
-      
-       
      
-         }
-    
         
     func display(){
     let myPlayer = Player()
@@ -44,21 +39,22 @@ class Game {
     func battle(){
     
     
-      nameFighter1 = player1.collectNameFighterTeam1()
-      nameFighter2 = player2.collectNameFighterTeam2()
+     
         
   var round = 0
       
         
-        // Definir a qui c'est le tour de jouer
-                   player1 = playerWhoPlay(round: round)
-                   player2 = playerWhoDontPlay(round: round)
+       
+                   
           repeat {
+          // Definir a qui c'est le tour de jouer
+          player1 = playerWhoPlay(round: round)
+            player2 = playerWhoDontPlay(round: round)
         // Demander au joueur de choisir son personnage
-                   let fighter = player1.selectWarrior1()
+                   let fighter = player1.selectWarrior()
                    
         // Demander au joueur de choisir un personnage adverse
-                   let otherFighter = player2.selectWarrior2()
+                   let otherFighter = player2.selectWarrior()
             
         //Faire apparaître le coffre
             let chest = Chest(randomStrenght: 10)
@@ -88,10 +84,7 @@ class Game {
                 } while playerChoice != "1" && playerChoice != "2" && playerChoice != "3"
 
 
-            
-                   
-                   
-                   round += 1
+            round += 1
        
           } while player1.hasTeamAlive() && player2.hasTeamAlive()
         }
