@@ -14,7 +14,14 @@ class Game {
     var nameFighter1 = [String]()
     var nameFighter2 = [String]()
     init() {
-        
+        print( "*********Welcome to French Game factory!************\n\nYou will test the ANTIC FIGHT GAME: \n\n")
+              
+             print("1. Two players choose three fighters to make a warrior's team. We'll have then two teams.Each player choose a fighter in his own team to meet another fighter in the other team.\n\n")
+             print("2. Fighters fight together or choose to improve their arms or to gain more lives. Sometimes a chest containing a weapon appears and a player randomly choosen can exchange his fighter's arm with the random one .At the end, the winner is the player with a fighter alive\n\n")
+              
+             print("3. Here is the list of possible fighters : \n\n******************\n\nTeam1: \n\nViking1, Gladiator1 and Knight1\n\n******************\n\nTeam2:\n\nViking2, Gladiator2 and Knight2\n\n******************\n\n")
+              
+            print("Here is a suggestion of optionnal names for your warriors :   \nVikings'names : Sigrid, Thor, Bjorn, Odin, Ragnar, Magnum... \nGladiators'names : Lucius, Marcus, Titus, Sextus, Quintus, Servius...\nKnights'names : Gauvain, Arthur, Perceval, Lancelot, Tristan...\n\n")
         player1 = Player()
         player2 = Player()
     }
@@ -25,14 +32,7 @@ class Game {
     func presentation(){
       
        
-       print( "*********Welcome to French Game factory!************\n\nYou will test the ANTIC FIGHT GAME: \n\n")
-        
-       print("1. Two players choose three fighters to make a warrior's team. We'll have then two teams.Each player choose a fighter in his own team to meet another fighter in the other team.\n\n")
-       print("2. Fighters fight together or choose to improve their arms or to gain more lives. Sometimes a chest containing a weapon appears and a player randomly choosen can exchange his fighter's arm with the random one .At the end, the winner is the player with a fighter alive\n\n")
-        
-       print("3. Here is the list of possible fighters : \n\n******************\n\nTeam1: \n\nViking1, Gladiator1 and Knight1\n\n******************\n\nTeam2:\n\nViking2, Gladiator2 and Knight2\n\n******************\n\n")
-        
-      print("Here is a suggestion of optionnal names for your warriors :   \nVikings'names : Sigrid, Thor, Bjorn, Odin, Ragnar, Magnum... \nGladiators'names : Lucius, Marcus, Titus, Sextus, Quintus, Servius...\nKnights'names : Gauvain, Arthur, Perceval, Lancelot, Tristan...\n\n")
+     
          }
     
         
@@ -97,19 +97,13 @@ class Game {
         }
     
    
-      //je ferai si viking1.life ==0 team1.remove(at :0)
-       
-    //tant que les deux  equipes ont un joueur vivant : repeat
-    //player1.hasTeamAlive() && player2.hasTeamAlive ???
-    //round +=1
-   //on calcule quel joueur joue
-    //player= playerWhoPlay()
-   //on affiche l'état des équipes
       
-// le joueur sélectionné choisit un guerrier dans son équipe
-  //faire un switch si le joueur sélectionné est le 1
-        //il choisit dans l'équipe 1 puis l'équipe2 sinon c'est l'inverse
-//player.selectWarrior1()
+    
+    
+    
+    //je ferai si viking1.life ==0 team1.remove(at :0)
+       
+    
  
   //le joueur sélectionné choisit un guerrier dans l'autre équipe
         //player.selectWarrior2() ou l'inverse

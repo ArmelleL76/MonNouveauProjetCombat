@@ -112,19 +112,12 @@ class Player {
        // 1. Creer les equipes
         
     func createTeam1()-> [Warrior]{
-        viking1 =  Warrior(life: 100, name: "nemefighter1[0]", weapon: Ax())
-        gladiator1 = Warrior(life: 80, name: "nameFighter1[1]", weapon: BroadSword())
-        knight1 = Warrior(life: 110, name: "nameFighter1[2]", weapon: Sword())
         
-        return [viking1, gladiator1, knight1]
-         }
+       
+     return []
+    }
         
-    func createTeam2()-> [Warrior]{
-            viking2 = Warrior(life: 100, name: "nameFighter2[0]", weapon: Ax())
-            gladiator2 = Warrior(life: 80, name: "nameFighter2[1]", weapon: BroadSword())
-            knight2 = Warrior(life: 110, name: "nameFighter2[2]", weapon: Sword())
-             return [viking2, gladiator2, knight2]
-         }
+   
     
       
     func displayTeam1()-> String{
