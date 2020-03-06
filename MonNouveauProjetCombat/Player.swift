@@ -20,8 +20,8 @@ class Player {
         while teamPlayer.count < 3 {
         
             print("Please choose the type of your warrior number \(teamPlayer.count + 1), type 1, 2 or 3 and type return key ")
-            print("choose 1 for Viking (life 100, weapon : Ax, )")
-            print("choose 2 for gladiator (life: 90  weapon : broadSword    )")
+            print("choose 1 for Viking (life 100, weapon : Ax)")
+            print("choose 2 for gladiator (life: 90  weapon : broadSword)")
             print("choose 3 for knight (life : 110  weapon : Sword)")
             
             
