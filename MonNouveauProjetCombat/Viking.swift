@@ -8,8 +8,8 @@
 
 import Foundation
 class Viking : Warrior{
-    init( name : String){
-        super.init(life : 100, name : name, weapon : Ax())
+    init(){
+        super.init(life : 100, weapon : Ax())
     }
     
 }

@@ -8,17 +8,33 @@
 
 import Foundation
 class Warrior {
+    
+    static var names: [String] = []
+    
     var life : Int
     var name : String
     var weapon : Weapon
     
     
-    init(life : Int, name : String, weapon : Weapon){
+    init(life : Int, weapon : Weapon){
     self.life = life
-    self.name = name
     self.weapon = weapon
+        print("What his name ?")
+        self.name = readLine()!
+        while Warrior.names.contains(self.name) {
+            print("Oups, his name already exist, please choose a new one:")
+            self.name = readLine()!
+        }
+        Warrior.names.append(self.name)
 }
-   
+    func warriorType() -> String {
+        return "\(self.self)"
+            .split(separator: ".")
+            .map({ value in
+                return String(value)
+            })
+            .last ?? ""
+    }
     
     func actionOn (fighter : Warrior) {
         fighter.life -= self.weapon.damage

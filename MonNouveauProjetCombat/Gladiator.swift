@@ -8,8 +8,8 @@
 
 import Foundation
 class Gladiator : Warrior{
-    init( name : String){
-        super.init(life : 80, name : name, weapon : BroadSword())
+    init(){
+        super.init(life : 80, weapon : BroadSword())
     }
     
 }

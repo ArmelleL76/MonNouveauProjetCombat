@@ -8,8 +8,8 @@
 
 import Foundation
 class Knight : Warrior{
-    init( name : String){
-        super.init(life : 110, name : name, weapon : Sword())
+    init(){
+        super.init(life : 110, weapon : Sword())
     }
     
 }
