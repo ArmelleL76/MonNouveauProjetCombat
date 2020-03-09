@@ -55,7 +55,9 @@ class Game {
             //Faire apparaître le coffre
             let chest = Chest(randomStrenght: 10)
             print(chest.appear())
-            
+            if chest.appear()  {
+                fighter.weapon.damage =  chest.exchange()
+            }
             // Effectuer l'action du personnage contre le personnage adverse
             
             var playerChoice : String = ""
@@ -126,4 +128,13 @@ class Game {
         }
     }
     
+    func gameStatistics(){
+    // On affiche le joueur gagnant
+        if player1.hasTeamAlive(){
+            print ("Player1 is the winner")}
+        else {print("The winner is player2")
+        }
+    //On affiche les vies des guerriers
+        player1.display()
+    }
 }

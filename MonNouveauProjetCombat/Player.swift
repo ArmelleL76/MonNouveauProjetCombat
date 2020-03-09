@@ -69,7 +69,7 @@ class Player {
     
     func display(){
         for warrior in teamPlayer {
-            print("\(warrior.warriorType()) --- Life: \(warrior.life) weapon: \(warrior.weapon.name)")
+            print("\(warrior.warriorType()) ---\(warrior.name)--- Life: \(warrior.life) weapon: \(warrior.weapon.name)")
         }
         
     }
