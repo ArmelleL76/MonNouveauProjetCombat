@@ -14,5 +14,5 @@ let game = Game()
 
 
 game.battle() // tous les joueurs de l'équipe 2 finissent par mourir mais les valeurs de l'équipe1 ne changent pas, la taille des équipes reste à 3, le test TeamisAlive ne marche donc pas...
-
+game.statistics()
 

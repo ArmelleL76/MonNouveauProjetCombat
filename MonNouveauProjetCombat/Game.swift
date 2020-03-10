@@ -128,14 +128,14 @@ class Game {
         }
     }
     
-    func gameStatistics(){
+    func statistics(){
     // On affiche le joueur gagnant
         print("Battle finished after \(round) turns")
         if player1.hasTeamAlive(){
             print ("Player1 is the winner")}
         else {print("The winner is player2")
         }
-    //On affiche les vies des guerriers
+    //We display lives in the teams
         player1.display()
         player2.display()
     }

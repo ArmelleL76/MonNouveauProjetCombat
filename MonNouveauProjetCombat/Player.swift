@@ -11,9 +11,8 @@ class Player {
     var names = [String]()
     var teamPlayer = [Warrior]()
     
-    var warriorsNamesTeam1 = [String]()
-    var warriorNamesTeam2 = [String]()
-    var nameFighter = [String]()
+  
+   
     
     init() {
         
