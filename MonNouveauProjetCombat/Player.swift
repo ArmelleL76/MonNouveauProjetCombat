@@ -19,7 +19,7 @@ class Player {
         
         while teamPlayer.count < 3 {
         
-            print("Please choose the type of your warrior number \(teamPlayer.count + 1), type 1, 2 or 3 and type return key ")
+            print("Please Players, choose the type of your warrior number \(teamPlayer.count + 1), type 1, 2 or 3 and type return key ")
             print("choose 1 for Viking (life 100, weapon : Ax)")
             print("choose 2 for gladiator (life: 90  weapon : broadSword)")
             print("choose 3 for knight (life : 110  weapon : Sword)")
@@ -68,8 +68,12 @@ class Player {
     }
     
     func display(){
-        for warrior in teamPlayer {
+        for warrior in teamPlayer{
+      var  index = 1
             print("\(warrior.warriorType()) ---\(warrior.name)--- Life: \(warrior.life) weapon: \(warrior.weapon.name)")
+        print("Fighter \(index) :" )
+            warrior.printCharacteristic()
+            index += 1
         }
         
     }
@@ -133,12 +137,8 @@ class Player {
     
     func selectWarrior() -> Warrior {
         
-        var i = 1
-        for warrior in teamPlayer{
-            print("Fighter \(i)")
-            warrior.printCharacteristic()
-            i += 1
-        }
+       display()
+        
         print("Enter your choice: ")
         print("1 for viking")
         print("2 for gladiator")
