@@ -67,10 +67,12 @@ class Player {
     }
     
     func display(){
+       var  index = 1
+       
         for warrior in teamPlayer{
-      var  index = 1
+            
             print("\(warrior.warriorType()) ---\(warrior.name)--- Life: \(warrior.life) weapon: \(warrior.weapon.name)")
-        print("Fighter \(index) :" )
+            print("Fighter \(index) :" )
             warrior.printCharacteristic()
             index += 1
         }
@@ -127,9 +129,10 @@ class Player {
     
     
     func hasTeamAlive() -> Bool {
-        
-        if teamPlayer.count > 0   {
-            return true
+        for warrior in teamPlayer {
+            if warrior.life > 0 {
+                return true
+            }
         }
         return false
     }
