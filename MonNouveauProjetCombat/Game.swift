@@ -54,7 +54,6 @@ class Game {
             
             //Faire apparaître le coffre
             let chest = Chest(randomStrenght: 10)
-            print(chest.appear())
             if chest.appear()  {
                 fighter.weapon.damage =  chest.exchange()
             }
