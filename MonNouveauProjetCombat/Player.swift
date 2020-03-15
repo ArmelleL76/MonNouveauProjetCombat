@@ -20,10 +20,10 @@ class Player {
       Player.namePlayers.append(self.name)
         while teamPlayer.count < 3 {
         
-            print("Please Players, choose the type of your warrior number \(teamPlayer.count + 1), type 1, 2 or 3 and type return key ")
+            print("\nPlease \(name), choose the type of your warrior number \(teamPlayer.count + 1), type 1, 2 or 3 and type return key \n")
             print("choose 1 for Viking (life 100, weapon : Ax)")
             print("choose 2 for gladiator (life: 90  weapon : broadSword)")
-            print("choose 3 for knight (life : 110  weapon : Sword)")
+            print("choose 3 for knight (life : 110  weapon : Sword)\n")
             
             
             
@@ -41,7 +41,7 @@ class Player {
                 
             }
         }
-        print("Team is done:")
+        print("\nTeam is done:\n")
         display()
         
     }
@@ -144,12 +144,12 @@ class Player {
     func selectWarrior() -> Warrior {
         
        //display() à supprimer, imprimait une deuxième fois les caractéristiques
+        var  index = 1
+        print("Enter your choice, who will fight?: \n")
+        for warrior in teamPlayer{
         
-        print("Enter your choice: ")
-        print("1 for viking")
-        print("2 for gladiator")
-        print("3 for knight")
-        
+        print("\(index) : \(warrior.warriorType()) ---\(warrior.name)\n")
+            index += 1}
         if  let choice = readLine(){
             let choiceNumber1 = Int(choice)!
             print("Your choice is : \(choiceNumber1)")

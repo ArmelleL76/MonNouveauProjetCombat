@@ -19,7 +19,7 @@ class Warrior {
     init(life : Int, weapon : Weapon){
     self.life = life
     self.weapon = weapon
-        print("Give a name to the fighter: ")
+        print("\nGive a name to the fighter: \n")
         self.name = readLine()!
         while Warrior.names.contains(self.name) {
             print("That name already exist, please choose a new one:")
