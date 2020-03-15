@@ -10,6 +10,6 @@ import Foundation
 class BroadSword : Weapon {
   
     init() {
-        super.init(damage: 18, name : "BroadSword")
+        super.init(damage: 22, name : "BroadSword")
     }
 }
