@@ -8,14 +8,16 @@
 
 import Foundation
 class Player {
-    var names = [String]()
+    var name : String
     var teamPlayer = [Warrior]()
-    
+  static var namePlayers : [String] = []
   
    
     
     init() {
-        
+       print("Please Player, give your name: ")
+       self.name = readLine()!
+      Player.namePlayers.append(self.name)
         while teamPlayer.count < 3 {
         
             print("Please Players, choose the type of your warrior number \(teamPlayer.count + 1), type 1, 2 or 3 and type return key ")
@@ -45,35 +47,34 @@ class Player {
     }
     
     // Players give their names
-    func collectNamePlayer1()->String{
-        var namePlayer1 = ""
-        print("\nFirst Player give your Name and do return\n\n")
-        
-        if  let name1 = readLine(){print("\nWelcome and good game: \(name1)\n")
-            namePlayer1 = name1
-        }
-        
-        return namePlayer1
-    }
-    
-    func collectNamePlayer2()->String{
-        var namePlayer2 = ""
-        print("\nSecond Player give your Name and do return\n\n")
-        
-        if  let name2 = readLine(){print("\nWelcome and good game: \(name2)\n")
-            namePlayer2 = name2
-        }
-        return namePlayer2
-    }
+//    func collectNamePlayer1()->String{
+//        var namePlayer1 = ""
+//        print("\nFirst Player give your Name and do return\n\n")
+//
+//        if  let name1 = readLine(){print("\nWelcome and good game: \(name1)\n")
+//            namePlayer1 = name1
+//        }
+//
+//        return namePlayer1
+//    }
+//
+//    func collectNamePlayer2()->String{
+//        var namePlayer2 = ""
+//        print("\nSecond Player give your Name and do return\n\n")
+//
+//        if  let name2 = readLine(){print("\nWelcome and good game: \(name2)\n")
+//            namePlayer2 = name2
+//        }
+//        return namePlayer2
+//    }
     
     func display(){
        var  index = 1
        
         for warrior in teamPlayer{
             
-            print("\(warrior.warriorType()) ---\(warrior.name)--- Life: \(warrior.life) weapon: \(warrior.weapon.name)")
-            print("Fighter \(index) :" )
-            warrior.printCharacteristic()
+            print("Fighter \(index) : \(warrior.warriorType()) ---\(warrior.name)--- Life: \(warrior.life) weapon: \(warrior.weapon.name)\n")
+            
             index += 1
         }
         
@@ -142,7 +143,7 @@ class Player {
     
     func selectWarrior() -> Warrior {
         
-       display()
+       //display() à supprimer, imprimait une deuxième fois les caractéristiques
         
         print("Enter your choice: ")
         print("1 for viking")
