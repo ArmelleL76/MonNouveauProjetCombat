@@ -133,9 +133,12 @@ class Player {
             if warrior.life > 0 {
                 return true
             }
-        }
-        return false
+        else if warrior.life <= 0 { warrior.life = 0
+            }}
+        
+            return false
     }
+    
     
     func selectWarrior() -> Warrior {
         
