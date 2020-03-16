@@ -15,7 +15,7 @@ class Player {
    
     
     init() {
-       print("Please Player, give your name: ")
+       print("Please Player, give your name: \n")
        self.name = readLine()!
       Player.namePlayers.append(self.name)
         while teamPlayer.count < 3 {
@@ -73,7 +73,7 @@ class Player {
        
         for warrior in teamPlayer{
             
-            print("Fighter \(index) : \(warrior.warriorType()) ---\(warrior.name)--- Life: \(warrior.life) weapon: \(warrior.weapon.name)\n")
+            print("** Fighter \(index) : \(warrior.warriorType()) --- \(warrior.name) --- Life: \(warrior.life) weapon: \(warrior.weapon.name)\n")
             
             index += 1
         }

@@ -17,11 +17,11 @@ class Game {
         print( "*********Welcome to French Game factory!************\n\nYou will test the ANTIC FIGHT GAME: \n\n")
         
         print("1. Two players choose three fighters to make a warrior's team. We'll have then two teams.Each player choose a fighter in his own team to meet another fighter in the other team.\n\n")
-        print("2. Fighters fight together or choose to improve their arms or to gain more lives. Sometimes a chest containing a weapon appears and a player randomly choosen can exchange his fighter's arm with the random one .At the end, the winner is the player with a fighter alive\n\n")
+        print("2. Fighters fight together or choose to improve their arms or to gain more lives. Sometimes a chest containing a weapon appears and a player randomly choosen can exchange his fighter's arm with the random one .At the end, the winner is the player with a fighter alive.\n\n")
         
-        print("3. Here is the list of possible fighters : \n\n******************\n\nTeam1: \n\nthree fighters chosen among  viking, gladiator and knight\n\n******************\n\nTeam2:\n\nthree fighters chosen among  viking, gladiator and knight\n\n******************\n\n")
+        print("3. Here is the list of possible fighters : \n\n******************\n\nTeam1: \n\nthree fighters chosen among  vikings, gladiators and knights\n\n******************\n\nTeam2:\n\nthree fighters chosen among  vikings, gladiators and knights\n\n******************\n\n")
         
-        print("Here is a suggestion of optionnal names for your warriors :   \nVikings'names : Sigrid, Thor, Bjorn, Odin, Ragnar, Magnum... \nGladiators'names : Lucius, Marcus, Titus, Sextus, Quintus, Servius, Magnus...\nKnights'names : Gauvain, Arthur, Perceval, Lancelot, Tristan...\n\n*******************\n\n")
+        print("Here is a suggestion of optionnal names for your warriors :   \nVikings'names : Sigrid, Thor, Bjorn, Odin, Ragnar, Magnum... \n\nGladiators'names : Lucius, Marcus, Titus, Sextus, Quintus, Servius, Magnus...\n\nKnights'names : Gauvain, Arthur, Perceval, Lancelot, Tristan...\n\n*******************\n\n")
         
         player1 = Player()
         player2 = Player()
@@ -61,13 +61,13 @@ class Game {
             
             var playerChoice : String = ""
             repeat{
-                print("What is your choice?")
-                print("1. fight against and cause damages : choose 1 and do return")
-                print("2. Increase arm's strenght : choose 2 and do return")
-                print("3. Cure your fighter : choose 3 and do return")
+                print("What is your choice?\n")
+                print("1. fight against and cause damages : choose 1 and do return\n")
+                print("2. Increase arm's strenght : choose 2 and do return\n")
+                print("3. Cure your fighter : choose 3 and do return\n")
                 
                 if let choice = readLine(){
-                    print("You choosed \(choice)")
+                    print("You choosed \(choice)\n")
                     playerChoice = choice
                     switch playerChoice
                     {
@@ -106,11 +106,11 @@ class Game {
     }
     
     func statistics(){
-        // On affiche le joueur gagnant
+        // We display the winner
         print("\nBattle finished after \(round) turns\n")
         if player1.hasTeamAlive(){
-            print ("Player1 is the winner\n")}
-        else {print("The winner is Player2\n")
+            print ("Player1 : \(player1.name) is the winner\n")}
+        else {print("The winner is Player2 : \(player2.name) \n")
         }
         //We display lives in the teams
         if round%2 == 0 {
