@@ -15,16 +15,17 @@ class Chest{
     func appear()-> Bool {
         let random = Int.random(in: 1..<7)
         if random % 3 == 0 {
-            print("A chest has appeared\n")
+            print("******* A CHEST HAS APPEARED !! ********\n")
+            print("The weapons are being exchanged with the randomOne\n")
             return true}
        
         else
-        { print("No chest this turn, sorry")
+        { print("No chest this turn, sorry\n")
             return false }
         
     }
     func armStrenght()->Int{
-        let randomInteger = Int.random(in: 12..<25)
+        let randomInteger = Int.random(in: 22..<35)
         self.randomStrenght = randomInteger
         print("The chest contains a weapon of power : \(randomStrenght)")
         

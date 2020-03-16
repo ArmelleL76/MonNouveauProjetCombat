@@ -10,7 +10,7 @@ import Foundation
 class Game {
     var player1 : Player
     var player2 : Player
-     var round = 0
+    var round = 0
     var nameFighter1 = [String]()
     var nameFighter2 = [String]()
     init() {
@@ -37,7 +37,7 @@ class Game {
         
         
         
-       
+        
         
         
         
@@ -87,7 +87,7 @@ class Game {
             
         } while player1.hasTeamAlive() && player2.hasTeamAlive()
     }
-
+    
     
     func playerWhoPlay(round: Int) -> Player {
         if round % 2 == 0 {
@@ -106,15 +106,15 @@ class Game {
     }
     
     func statistics(){
-    // On affiche le joueur gagnant
+        // On affiche le joueur gagnant
         print("\nBattle finished after \(round) turns\n")
         if player1.hasTeamAlive(){
             print ("Player1 is the winner\n")}
         else {print("The winner is Player2\n")
         }
-    //We display lives in the teams
+        //We display lives in the teams
         if round%2 == 0 {
-        print("Results for Team1 :\n")
+            print("Results for Team1 :\n")
             player1.display()
             print("Results for Team2 :\n")
             player2.display()}
