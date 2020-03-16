@@ -17,8 +17,8 @@ class Warrior {
     
     
     init(life : Int, weapon : Weapon){
-    self.life = life
-    self.weapon = weapon
+        self.life = life
+        self.weapon = weapon
         print("\nGive a name to the fighter: \n")
         self.name = readLine()!
         while Warrior.names.contains(self.name) {
@@ -26,7 +26,7 @@ class Warrior {
             self.name = readLine()!
         }
         Warrior.names.append(self.name)
-}
+    }
     func warriorType() -> String {
         return "\(self.self)"
             .split(separator: ".")
@@ -37,34 +37,24 @@ class Warrior {
     }
     
     func actionOn (fighter : Warrior) {
-        fighter.life -= self.weapon.damage
-        
+        fighter.receiveDamage(damage: self.weapon.damage)
     }
     
-     func receiveDamage(damage : Int){
-                self.life = self.life - damage
-          //If life turns into negative value, life will be equal to zero
+    func receiveDamage(damage : Int){
+        self.life = self.life - damage
+        //If life turns into negative value, life will be equal to zero
         if self.life < 0
-                {
-                    self.life = 0
-                }
-            }
-            
-            
-            
-        func fightAgainst(fighter : Warrior)
-            {
-                fighter.receiveDamage(damage: self.weapon.damage)
-            }
+        {
+            self.life = 0
+        }
+    }
+    
     func increasePowerArm ()
-            {self.weapon.damage += 8}
-        
-            
-      
-       
-        func cureOneself(){
-            self.life +=  10 }
-        
+    {self.weapon.damage += 8}
+    
+    func cureOneself(){
+        self.life +=  10 }
+    
     
     func printCharacteristic(){
         if life > 0 {
