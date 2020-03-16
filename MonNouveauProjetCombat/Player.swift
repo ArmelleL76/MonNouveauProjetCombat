@@ -153,7 +153,7 @@ class Player {
         if  let choice = readLine(){
             let choiceNumber1 = Int(choice)!
             print("Your choice is : \(choiceNumber1)")
-            print("test intermédiaire : taille équipe1 : \(teamPlayer.count)")
+           
             let selectedWarrior = teamPlayer[choiceNumber1 - 1]
             if selectedWarrior.life > 0 {
                 return selectedWarrior

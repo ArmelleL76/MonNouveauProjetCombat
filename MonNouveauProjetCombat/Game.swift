@@ -82,34 +82,11 @@ class Game {
             
             
             round += 1
-            
+            player1.display()
+            player2.display()
         } while player1.hasTeamAlive() && player2.hasTeamAlive()
     }
-    
-    
-    
-    
-    
-    
-    //je ferai si viking1.life ==0 team1.remove(at :0)
-    
-    
-    
-    //le joueur sélectionné choisit un guerrier dans l'autre équipe
-    //player.selectWarrior2() ou l'inverse
-    //On affiche les deux guerriers qui vont s'affronter
-    
-    //on lance l'apparition du coffre
-    //Si coffre et randomStrenght> à l'arme du guerrier on échange
-    //le joueur choisit une action à effectuer
-    //l'action est effectuée
-    //on affiche les résultats intermédiaires
-    //si un guerrier a une vie negative on la met à zero
-    //si  un guerrier est mort on le remove de l'équipe
-    // on boucle while isAlive is true
-    
-    
-    
+
     
     func playerWhoPlay(round: Int) -> Player {
         if round % 2 == 0 {
@@ -121,9 +98,9 @@ class Game {
     
     func playerWhoDontPlay(round: Int) -> Player {
         if round % 2 == 1 {
-            return player1
-        } else {
             return player2
+        } else {
+            return player1
         }
     }
     
@@ -135,7 +112,16 @@ class Game {
         else {print("The winner is player2")
         }
     //We display lives in the teams
-        player1.display()
-        player2.display()
+        if round%2 == 0 {
+        print("Results for Team1 :")
+            player1.display()
+            print("Results for Team2 :")
+            player2.display()}
+        else {
+            print("Results for Team1 :")
+            player2.display()
+            print("Results for Team2 :")
+            player1.display()
+        }
     }
 }
