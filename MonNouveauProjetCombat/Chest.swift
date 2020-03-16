@@ -16,11 +16,11 @@ class Chest{
         let random = Int.random(in: 1..<7)
         if random % 3 == 0 {
             print("******* A CHEST HAS APPEARED !! ********\n")
-            print("The weapons are being exchanged with the randomOne\n")
+            print("The weapon of fighter1 will be exchanged with the  randomOne\n")
             return true}
-       
+            
         else
-        { print("No chest this turn, sorry\n")
+        { print("\nNo chest this turn, sorry\n")
             return false }
         
     }
@@ -33,8 +33,8 @@ class Chest{
     }
     func exchange()->Int{
         var damage : Int = 10
-         damage = self.armStrenght()
-    return damage
-    
+        damage = self.armStrenght()
+        return damage
+        
     }
 }
