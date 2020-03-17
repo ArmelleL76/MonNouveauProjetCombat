@@ -67,21 +67,21 @@ class Game {
                 print("3. Cure your fighter : choose 3 and do return\n")
                 
                 if let choice = readLine(){
-                    print("You choosed \(choice)\n")
+                    print("\nYou choosed \(choice)\n")
                     playerChoice = choice
                     switch playerChoice
                     {
                     case "1" : fighter.actionOn(fighter: otherFighter)
                     case "2" : fighter.increasePowerArm()
                     case "3" : fighter.cureOneself()
-                    default : print("Choose a number in (1,2,3)")
+                    default : print("Choose a number in (1,2,3)\n")
                         
                     }
                 }
             } while playerChoice != "1" && playerChoice != "2" && playerChoice != "3"
             
-            
             round += 1
+            
             fighter.printCharacteristic()
             otherFighter.printCharacteristic()
             
@@ -114,15 +114,15 @@ class Game {
         }
         //We display lives in the teams
         if round%2 == 0 {
-            print("Results for Team1 :\n")
-            player1.display()
             print("Results for Team2 :\n")
-            player2.display()}
+            player2.display()
+            print("Results for Team1 :\n")
+            player1.display()}
         else {
             print("Results for Team1 :\n")
-            player2.display()
-            print("Results for Team2 :\n")
             player1.display()
+            print("Results for Team2 :\n")
+            player2.display()
         }
     }
 }

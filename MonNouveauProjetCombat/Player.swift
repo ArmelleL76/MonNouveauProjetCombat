@@ -29,11 +29,11 @@ class Player {
             
             if let  choice = readLine(){
                 switch choice {
-                case "1" : print("You have chosen a Viking\n")
+                case "1" : print("\nYou have chosen a Viking\n")
                 teamPlayer.append(Viking())
-                case "2" : print("You have chosen a Gladiator\n")
+                case "2" : print("\nYou have chosen a Gladiator\n")
                 teamPlayer.append(Gladiator())
-                case "3" : print("You have chosen a Knight\n")
+                case "3" : print("\nYou have chosen a Knight\n")
                 teamPlayer.append(Knight())
                     
                 default : print("Choose among 1, 2 or 3 please")
@@ -74,7 +74,7 @@ class Player {
     func selectWarrior() -> Warrior {
         
         var  index = 1
-        print("Enter your choice, who will fight?: \n")
+        print("\n\nEnter your choice, who will fight?: \n")
         for warrior in teamPlayer{
             
             print("\(index) : \(warrior.warriorType()) ---\(warrior.name)\n")
