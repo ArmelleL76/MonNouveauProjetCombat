@@ -77,7 +77,7 @@ class Player {
         print("\n\nEnter your choice, who will fight?: \n")
         for warrior in teamPlayer{
             
-            print("\(index) : \(warrior.warriorType()) ---\(warrior.name)\n")
+            print("\(index) : \(warrior.warriorType())  ---  \(warrior.name)\n")
             index += 1}
         if  let choice = readLine(){
             let choiceNumber1 = Int(choice)!
