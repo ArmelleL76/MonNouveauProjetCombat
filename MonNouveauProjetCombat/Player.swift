@@ -82,7 +82,7 @@ class Player {
         if  let choice = readLine(){
             
             if  let choiceNumber1 = Int(choice) {
-            if Int(choice)! != 3 || Int(choice)! != 2 || Int(choice)! != 1{
+            if Int(choice)! != 3 && Int(choice)! != 2 && Int(choice)! != 1{
             print("you entered an invalid value")
                 return selectWarrior()
                 }
