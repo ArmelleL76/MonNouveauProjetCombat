@@ -82,7 +82,8 @@ class Player {
         if  let choice = readLine(){
            
                 var choiceNumber1 = Int(choice)!
-            if choiceNumber1 > 3 { if let choice2 = readLine()
+            if choiceNumber1 > 3 { print("Entrez un nombre compris entre 1 et 3 ")
+                if let choice2 = readLine()
             {  choiceNumber1 = Int(choice2)!}}
             
                 print("Your choice is : \(choiceNumber1)")
