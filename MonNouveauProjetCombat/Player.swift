@@ -80,23 +80,30 @@ class Player {
             print("\(index) : \(warrior.warriorType())  ---  \(warrior.name)\n")
             index += 1}
         if  let choice = readLine(){
-            print("\(choice)")
-            if  let choiceNumber1 = Int(choice) {
             
+            if  let choiceNumber1 = Int(choice) {
+            if Int(choice) == nil || Int(choice)! > 3 {
+            print("you entered an invalid value")
+                return selectWarrior()
+                }
                 print("Your choice is : \(choiceNumber1)")
             
                 let selectedWarrior = teamPlayer[choiceNumber1 - 1]
             if selectedWarrior.life > 0 {
                 return selectedWarrior
-                }}
-            else if Int(choice) == nil {
-                print("you entered an invalid value")}
-            else {
+                }
+             
+            else if selectedWarrior.life <= 0 {
                 print("You choosed a dead warrior, Please select another one.")
                 }
+            else { print("You chosed an invalid value")
+                return selectWarrior()
+                }
+            }
         }
         return selectWarrior()
         
     }
     
+
 }
