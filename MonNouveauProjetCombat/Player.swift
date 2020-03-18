@@ -80,10 +80,14 @@ class Player {
             print("\(index) : \(warrior.warriorType())  ---  \(warrior.name)\n")
             index += 1}
         if  let choice = readLine(){
-            let choiceNumber1 = Int(choice)!
-            print("Your choice is : \(choiceNumber1)")
+           
+                var choiceNumber1 = Int(choice)!
+            if choiceNumber1 > 3 { if let choice2 = readLine()
+            {  choiceNumber1 = Int(choice2)!}}
             
-            let selectedWarrior = teamPlayer[choiceNumber1 - 1]
+                print("Your choice is : \(choiceNumber1)")
+            
+                let selectedWarrior = teamPlayer[choiceNumber1 - 1]
             if selectedWarrior.life > 0 {
                 return selectedWarrior
             } else {

@@ -22,7 +22,7 @@ class Warrior {
         print("\nGive a name to the fighter: \n")
         self.name = readLine()!
         while Warrior.names.contains(self.name) {
-            print("That name already exist, please choose a new one:")
+            print("That name already exist, please choose a new one:\n")
             self.name = readLine()!
         }
         Warrior.names.append(self.name)
@@ -50,7 +50,10 @@ class Warrior {
     }
     
     func increasePowerArm ()
-    {self.weapon.damage += 8}
+    {
+        self.weapon.damage += 12
+        
+    }
     
     func cureOneself(){
         self.life +=  10 }
