@@ -51,7 +51,7 @@ class Warrior {
     
     func increasePowerArm ()
     {
-        self.weapon.damage += 12
+        self.weapon.damage += 25
         
     }
     
