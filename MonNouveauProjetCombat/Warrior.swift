@@ -56,7 +56,7 @@ class Warrior {
     }
     
     func cureOneself(){
-        self.life +=  10 }
+        self.life +=  20 }
     
     
     func printCharacteristic(){
