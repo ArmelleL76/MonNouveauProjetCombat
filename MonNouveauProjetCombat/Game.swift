@@ -14,31 +14,25 @@ class Game {
     var nameFighter1 = [String]()
     var nameFighter2 = [String]()
     init() {
-        print( "*********Welcome to French Game factory!************\n\nYou will test the ANTIC FIGHT GAME: \n\n")
+        print( "*********Welcome to French Game factory!************\n\nYou will test the ANTIC FIGHT GAME: \n\n")   //print the name of the game
         
-        print("1. Two players choose three fighters to make a warrior's team. We'll have then two teams.Each player choose a fighter in his own team to meet another fighter in the other team.\n\n")
-        print("2. Fighters fight together or choose to improve their arms or to gain more lives. Sometimes a chest containing a weapon appears and a player randomly choosen can exchange his fighter's arm with the random one .At the end, the winner is the player with a fighter alive.\n\n")
+        print("1. Two players choose three fighters to make a warrior's team. We'll have then two teams.Each player choose a fighter in his own team to meet another fighter in the other team.\n\n") //print the rôle of players
+        print("2. Fighters fight together or choose to improve their arms or to gain more lives. Sometimes a chest containing a weapon appears and a player randomly choosen can exchange his fighter's arm with the random one .At the end, the winner is the player with a fighter alive.\n\n") // print the actions of warriors
         
-        print("3. Here is the list of possible fighters : \n\n******************\n\nTeam1: \n\nthree fighters chosen among  vikings, gladiators and knights\n\n******************\n\nTeam2:\n\nthree fighters chosen among  vikings, gladiators and knights\n\n******************\n\n")
+        print("3. Here is the list of possible fighters : \n\n******************\n\nTeam1: \n\nthree fighters chosen among  vikings, gladiators and knights\n\n******************\n\nTeam2:\n\nthree fighters chosen among  vikings, gladiators and knights\n\n******************\n\n") //print the type of warriors
         
-        print("Here is a suggestion of optionnal names for your warriors :   \nVikings'names : Sigrid, Thor, Bjorn, Odin, Ragnar, Magnum... \n\nGladiators'names : Lucius, Marcus, Titus, Sextus, Quintus, Servius, Magnus...\n\nKnights'names : Gauvain, Arthur, Perceval, Lancelot, Tristan...\n\n*******************\n\n")
+        print("Here is a suggestion of optionnal names for your warriors :   \nVikings'names : Sigrid, Thor, Bjorn, Odin, Ragnar, Magnum... \n\nGladiators'names : Lucius, Marcus, Titus, Sextus, Quintus, Servius, Magnus...\n\nKnights'names : Gauvain, Arthur, Perceval, Lancelot, Tristan...\n\n*******************\n\n")   //suggest names for antic fighters
         
-        player1 = Player()
-        player2 = Player()
+        player1 = Player()  //create first instance of Player
+        player2 = Player()  //create second instance of Player
     }
     
     
     
     
     
-    
+    //Function which pilot the battle
     func battle(){
-        
-        
-        
-        
-        
-        
         
         
         
@@ -106,7 +100,7 @@ class Game {
     }
     
     func statistics(){
-        // We display the winner
+        // We display the winner and the number of rounds
         print("\nBattle finished after \(round) turns\n")
         if player1.hasTeamAlive(){
             print ("Player1 : \(player1.name) is the winner\n")}
