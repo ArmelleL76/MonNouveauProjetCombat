@@ -46,7 +46,7 @@ class Player {
         
     }
     
-    
+    //function to display state of fighter after a turn in battle
     func display(){
         var  index = 1
         
@@ -59,6 +59,7 @@ class Player {
         
     }
     
+    //function returning false or true if team's player is still alive
     func hasTeamAlive() -> Bool {
         for warrior in teamPlayer {
             if warrior.life > 0 {
@@ -70,7 +71,7 @@ class Player {
         return false
     }
     
-    
+    //function to select which fighters will be opposed
     func selectWarrior() -> Warrior {
         
         var  index = 1
@@ -82,26 +83,26 @@ class Player {
         if  let choice = readLine(){
             
             if  let choiceNumber1 = Int(choice) {
-            if Int(choice) != 3 && Int(choice) != 2 && Int(choice) != 1{
-            print("you entered an invalid value")
-                return selectWarrior()
+                if Int(choice) != 3 && Int(choice) != 2 && Int(choice) != 1{
+                    print("you entered an invalid value")
+                    return selectWarrior()
                 }
                 print("Your choice is : \(choiceNumber1)")
-            
+                
                 let selectedWarrior = teamPlayer[choiceNumber1 - 1]
-            if selectedWarrior.life > 0 {
-                return selectedWarrior
+                if selectedWarrior.life > 0 {
+                    return selectedWarrior
                 }
-             
-            else if selectedWarrior.life <= 0 {
-                print("You choosed a dead warrior, Please select another one.")
+                    
+                else if selectedWarrior.life <= 0 {
+                    print("You choosed a dead warrior, Please select another one.")
                 }
-           
+                
             }
         }
         return selectWarrior()
         
     }
     
-
+    
 }
