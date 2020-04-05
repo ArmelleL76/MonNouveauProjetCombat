@@ -25,7 +25,7 @@ class Chest{
         
     }
     func armStrenght()->Int{
-        let randomInteger = Int.random(in: 26..<40)
+        let randomInteger = Int.random(in: 26..<45)
         self.randomStrenght = randomInteger
         print("The chest contains a weapon of power : \(randomStrenght)\n\nThe weapon of fighter1 will be exchanged with the  randomOne\n")
         return randomInteger
