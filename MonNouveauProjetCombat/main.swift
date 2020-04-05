@@ -8,8 +8,12 @@
 
 import Foundation
 
-
+//We call the Game's class which contains the presentation of game
 let game = Game()
+
+//Once caracteres are created, We enter dans the battle's section
 game.battle()
+
+//We display the final results after the end of the game
 game.statistics()
 
