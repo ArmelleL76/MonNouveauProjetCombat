@@ -61,7 +61,7 @@ class Warrior {
     
     func printCharacteristic(){
         if life > 0 {
-            print("\(name) is still alive, Life : \(life)\n\n          ************\n")
+            print("\(name) is still alive, Life : \(life), force : \(weapon.damage)\n\n          ************\n")
         }
         else {
             print("\(name) is dead\n\n       ************\n")
