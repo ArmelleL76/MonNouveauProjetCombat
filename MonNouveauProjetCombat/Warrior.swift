@@ -8,14 +8,14 @@
 
 import Foundation
 class Warrior {
-    
+    //MARK: properties
     static var names: [String] = []
     
     var life : Int
     var name : String
     var weapon : Weapon
     
-    
+    //MARK: constructor
     init(life : Int, weapon : Weapon){
         self.life = life
         self.weapon = weapon
@@ -27,6 +27,8 @@ class Warrior {
         }
         Warrior.names.append(self.name)
     }
+    
+    //MARK: methods
     func warriorType() -> String {
         return "\(self.self)"
             .split(separator: ".")

@@ -8,10 +8,14 @@
 
 import Foundation
 class Chest{
+    //MARK: properties
     var randomStrenght : Int
+    
+    //MARK: constructor
     init(randomStrenght : Int)
     {self.randomStrenght = randomStrenght}
     
+    //MARK: methods
     //we call a random function to make the chest appear
     func appear()-> Bool {
         let random = Int.random(in: 1..<7)

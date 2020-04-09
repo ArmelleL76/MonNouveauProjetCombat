@@ -8,11 +8,12 @@
 
 import Foundation
 class Player {
+    //MARK: properties
     var name : String
     var teamPlayer = [Warrior]()
     static var namePlayers : [String] = []
     
-    
+    //MARK: constructor
     
     init() {
         print("Please Player, give your name: \n")
@@ -46,6 +47,7 @@ class Player {
         
     }
     
+    //MARK: methods
     //function to display state of fighter after a turn in battle
     func display(){
         var  index = 1

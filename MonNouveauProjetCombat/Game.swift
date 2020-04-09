@@ -8,15 +8,19 @@
 
 import Foundation
 class Game {
+    //MARK: properties
     var player1 : Player
     var player2 : Player
-    var round = 0
-    var nameFighter1 = [String]()
-    var nameFighter2 = [String]()
+    private var round = 0
+    private var nameFighter1 = [String]()
+    private var nameFighter2 = [String]()
+    
+    //MARK: constructor
     init() {
         print( "*********Welcome to French Game factory!************\n\nYou will test the ANTIC FIGHT GAME: \n\n")   //print the name of the game
         
         print("1. Two players choose three fighters to make a warrior's team. We'll have then two teams.Each player choose a fighter in his own team to meet another fighter in the other team.\n\n") //print the rôle of players
+        
         print("2. Fighters fight together or choose to improve their arms or to gain more lives. Sometimes a chest containing a weapon appears and a player randomly choosen can exchange his fighter's arm with the random one .At the end, the winner is the player with a fighter alive.\n\n") // print the actions of warriors
         
         print("3. Here is the list of possible fighters : \n\n******************\n\nTeam1: \n\nthree fighters chosen among  vikings, gladiators and knights\n\n******************\n\nTeam2:\n\nthree fighters chosen among  vikings, gladiators and knights\n\n******************\n\n") //print the type of warriors
@@ -28,7 +32,7 @@ class Game {
     }
     
     
-    
+    //MARK: methods
     
     
     //Function which pilot the battle
@@ -83,7 +87,7 @@ class Game {
     }
     
     
-    func playerWhoPlay(round: Int) -> Player {
+    private func playerWhoPlay(round: Int) -> Player {
         if round % 2 == 0 {
             return player2
         } else {
@@ -91,7 +95,7 @@ class Game {
         }
     }
     
-    func playerWhoDontPlay(round: Int) -> Player {
+    private func playerWhoDontPlay(round: Int) -> Player {
         if round % 2 == 1 {
             return player2
         } else {
@@ -103,16 +107,18 @@ class Game {
         // We display the winner and the number of rounds
         print("\nBattle finished after \(round) turns\n")
         if player1.hasTeamAlive(){
-            print ("Player1 : \(player1.name) is the winner\n")}
-        else {print("The winner is Player2 : \(player2.name) \n")
+            print ("Player1 : \(player1.name) is the winner\n")
+            
+        } else {
+            print("The winner is Player2 : \(player2.name) \n")
         }
         //We display lives in the teams
         if round%2 == 0 {
             print("Results for Team2 :\n")
             player2.display()
             print("Results for Team1 :\n")
-            player1.display()}
-        else {
+            player1.display()
+        } else {
             print("Results for Team1 :\n")
             player1.display()
             print("Results for Team2 :\n")
