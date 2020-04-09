@@ -30,14 +30,14 @@ class Chest{
         
     }
     //we calculate the randomStrenght of Chest's arm
-    func armStrenght()->Int{
+    private func armStrenght()->Int{
         let randomInteger = Int.random(in: 26..<45)
         self.randomStrenght = randomInteger
         print("The chest contains a weapon of power : \(randomStrenght)\n\nThe weapon of fighter1 will be exchanged with the  randomOne\n")
         return randomInteger
     }
     //we create a function to exchange fighter's arm with the random's one
-    func exchange()->Int{
+     func exchange()->Int{
         var damage : Int = 10
         damage = self.armStrenght()
         return damage
